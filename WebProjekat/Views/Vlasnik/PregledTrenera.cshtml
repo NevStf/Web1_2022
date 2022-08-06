@@ -1,0 +1,44 @@
+﻿@model List<WebProjekat.Models.Korisnik>
+
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<table class="table table-striped">
+    <tr>
+        <th>
+            Korisnicko Ime
+        </th>
+        <th>Lozinka</th>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Email</th>
+        <th>Pol</th>
+        <th>Datum Rodjenja</th>
+        <th>Uloga</th>
+        <th>Gde radi</th>
+        <th> </th>
+
+    </tr>
+
+    @foreach (WebProjekat.Models.Korisnik k in Model)
+    {
+<tr>
+    <td>@k.KorisnickoIme</td>
+    <td>@k.Lozinka</td>
+    <td>@k.Ime</td>
+    <td>@k.Prezime</td>
+    <td>@k.Email</td>
+    <td>@k.Pol</td>
+    <td>@k.DR</td>
+    <td>@k.Uloga.ToString()</td>
+    <td>@k.FitnesCentarUKomJeAngazovan.Naziv</td>
+    @if (!k.Blokiran)
+    {
+        <td><a class="btn btn-info" href="/Vlasnik/BlokirajTrenera?korisnickoIme=@k.KorisnickoIme">Blokiraj Trenera</a> </td>
+    }
+    else
+    {
+        <td><a class="btn btn-info" href="/Vlasnik/BlokirajTrenera?korisnickoIme=@k.KorisnickoIme">Odblokiraj Trenera</a> </td>
+    }
+
+</tr>
+    }
+</table>

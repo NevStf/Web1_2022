@@ -1,0 +1,175 @@
+﻿@using WebProjekat.Models
+@model Tuple<List<GrupniTrening>, List<GrupniTrening>>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*/*Grupni Trening
+    ● Naziv
+    ● Tip treninga (yoga, les mills tone, body pump itd. )
+    ● Fitnes centar gde se održava trening (veza sa klasom Fitnes centar)
+    ● Trajanje treninga (izraženo u minutima)
+    ● Datum i vreme treninga (čuvati u formatu dd/MM/yyyy HH:mm)
+    ● Maksimalan broj posetilaca
+    ● Spisak posetilaca (lista Korisnika sa ulogom Posetilac koji su se prijavili da pohađaju
+    trening)*/*@
+<h1>@ViewBag.Message</h1>
+
+<div class="row">
+
+    <form action="/Trener/PregledTreninga" method="post">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="NazivTreninga">Trazi Naziv Treninga</label>
+                <input class="form-control" type="text" name="NazivTreninga" />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="Tip">Trazi Tip Treninga</label>
+                <select name="Tip" value="" class="form-control">
+                    <option value=""></option>
+                    <option value=0>Yoga</option>
+                    <option value=1>Les Mills Tone</option>
+                    <option value=2>Body Pump</option>
+                    <option value=3>Zumba</option>
+                    <option value=4>Drugo</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="DatumIVremeMin">Od:</label>
+                <input class="form-control" type="datetime-local" name="DatumIVremeMin" />
+                <label for="DatumIVremeMax">Do:</label>
+                <input class="form-control" type="datetime-local" name="DatumIVremeMax" />
+            </div>
+        </div>
+        <input type="submit" class="btn-primary" value="Pretrazi" />
+    </form>
+
+</div>
+
+
+<hr />
+
+<div class="row">
+    <div class="col-lg-4">
+        <a class="btn btn-primary" href="/Trener/SortirajNaziv/0">SortirajPoNazivuAsc</a>
+        <a class="btn btn-primary" href="/Trener/SortirajNaziv/1">SortirajPoNazivuDsc</a>
+    </div>
+    <div class="col-lg-4">
+        <a class="btn btn-primary" href="/Trener/SortirajTip/0">SortirajTipAsc</a>
+        <a class="btn btn-primary" href="/Trener/SortirajTip/1">SortirajTipDsc</a>
+    </div>
+    <div class="col-lg-4">
+        <a class="btn btn-primary" href="/Trener/SortirajVreme/0">SortirajVremeAsc</a>
+        <a class="btn btn-primary" href="/Trener/SortirajVreme/1">SortirajVremeDsc</a>
+    </div>
+</div>
+<hr />
+
+<a class="btn btn-info" href="/Trener/DodajTrening/">Dodaj Trening </a>
+<hr />
+<table class="table table-striped" style="margin-top:20px">
+    <tr><th>Prosli Treninzi</th></tr>
+    <tr>
+        <th>
+            Naziv treninga
+        </th>
+        <th>
+            Tip treninga
+        </th>
+        <th>
+            Fitnes Centar
+        </th>
+        <th>
+            Datum i vreme
+        </th>
+        <th>
+            Maksimalan broj posetilaca
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (WebProjekat.Models.GrupniTrening gp in Model.Item1)
+    {
+        if (!gp.Obrisan)
+        {
+            <tr>
+                <td>@gp.Naziv</td>
+                <td>@gp.TipTreninga.ToString()</td>
+                <td>@gp.MestoOdrzavanja.Naziv</td>
+                <td>@gp.DR</td>
+                <td>@gp.MaksBrojPosetilaca</td>
+                <td>
+                    <a class="btn btn-primary" href="/Trener/DetaljiTrening/@gp.IDGT">Detalji</a> <br />
+
+                    @if (gp.DatumiVremeTreninga > DateTime.Now.AddSeconds(10))
+                    {
+                        <a class="btn btn-danger" href="/Trener/ObrisiTrening/@gp.IDGT">Obrisi</a>
+                        <a class="btn btn-success" href="/Trener/IzmeniTrening/@gp.IDGT">Izmeni</a><br />
+                    }
+
+                </td>
+            </tr>
+        }
+
+    }
+
+</table>
+
+
+
+<table class="table table-striped" style="margin-top:20px">
+    <tr><th>Buduci Treninzi</th></tr>
+    <tr>
+        <th>
+            Naziv treninga
+        </th>
+        <th>
+            Tip treninga
+        </th>
+        <th>
+            Fitnes Centar
+        </th>
+        <th>
+            Datum i vreme
+        </th>
+        <th>
+            Maksimalan broj posetilaca
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (WebProjekat.Models.GrupniTrening gp in Model.Item2)
+    {
+        if (!gp.Obrisan)
+        {
+            <tr>
+                <td>@gp.Naziv</td>
+                <td>@gp.TipTreninga.ToString()</td>
+                <td>@gp.MestoOdrzavanja.Naziv</td>
+                <td>@gp.DR</td>
+                <td>@gp.MaksBrojPosetilaca</td>
+                <td>
+                    <a class="btn btn-primary" href="/Trener/DetaljiTrening/@gp.IDGT">Detalji</a> <br />
+
+                    @if (gp.DatumiVremeTreninga > DateTime.Now.AddSeconds(10))
+                    {
+                        <a class="btn btn-danger" href="/Trener/ObrisiTrening/@gp.IDGT">Obrisi</a>
+                        <a class="btn btn-success" href="/Trener/IzmeniTrening/@gp.IDGT">Izmeni</a><br />
+                    }
+
+                </td>
+            </tr>
+        }
+
+    }
+
+</table>

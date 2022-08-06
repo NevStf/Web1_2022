@@ -1,0 +1,46 @@
+﻿@model WebProjekat.Models.Korisnik
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h1>@ViewBag.Message</h1>
+<form class="col-lg-4" action="/Korisnik/IzmeniProfil" method="post">
+    <div class="form-group">
+        <label for="KorisnickoIme">Korisnicko Ime:</label>
+        <input class="form-control" type="text" name="KorisnickoIme" value="@Model.KorisnickoIme" disabled />
+        <p class="text-danger">@ViewBag.KorisnickoIme</p>
+    </div>
+
+    <div class="form-group">
+        <label for="Ime">Ime:</label>
+        <input class="form-control" type="text" name="Ime" value="@Model.Ime" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Prezime">Prezime:</label>
+        <input class="form-control" type="text" name="Prezime" value="@Model.Prezime" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Lozinka">Lozinka:</label>
+        <input class="form-control" type="password" name="Lozinka" value="@Model.Lozinka" required />
+        <p class="text-danger">@ViewBag.Lozinka</p>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">E-mail:</label>
+        <input class="form-control" type="email" name="Email" value="@Model.Email" required />
+    </div>
+
+    <div class="form-group">
+        <label for="DatumRodjenja">Datum rodjenja:</label>
+        <input class="form-control" type="date" name="DatumRodjenja" value="@Model.DatumRodjenja.ToString("yyyy-MM-dd")" required />
+    </div>
+
+    @* reference za terarni https://stackoverflow.com/questions/3518002/how-can-i-set-the-default-value-for-an-html-select-element*@
+    <label for="Pol">Pol:</label>
+    <select name="Pol" style="margin-bottom: 15px" required>
+        <option value="Musko" @(Model.Pol.Equals("Musko") ? "selected" : "")>Musko</option>
+        <option value="Zensko" @(Model.Pol.Equals("Zensko") ? "selected" : "")>Zensko</option>
+        <option value="Ostalo" @(Model.Pol.Equals("Ostalo") ? "selected" : "")>Ostalo</option>
+    </select>
+    <input class="form-control" type="submit" name="IzmeniProfil" value="Izmeni Profil" />
+
+</form>

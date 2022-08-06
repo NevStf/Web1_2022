@@ -1,0 +1,43 @@
+﻿@using WebProjekat.BazaPodataka
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a class="btn btn-info" href="/Vlasnik/DodajFitnesCentar/">Dodaj Fitnes Centar </a>
+<table class="table table-striped">
+    <tr>
+        <th>
+            ID Fitnes Centra 
+        </th>
+        <th>
+            Naziv Fitnes Centra
+        </th>
+        <th>
+            Adresa
+        </th>
+        <th>
+            Godina Nastanka
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (WebProjekat.Models.FitnesCentar fc in Model)
+     {
+        if (fc.KorisnickoImeVlasnika == ViewData["KorisnickoIme"].ToString() && !fc.Obrisan)        
+        {
+            <tr>
+                <td>@fc.IDCentra</td>
+                <td>@fc.Naziv</td>
+                <td>@fc.AdresaFitnesCentra</td>
+                <td>@fc.GodinaOtvaranja</td>
+                <td>
+                    <a class="btn btn-primary" href="/FitnesCentar/PregledFitnesCentra/@fc.IDCentra">Detalji</a> <br/>
+                    <a class="btn btn-success" href="/Vlasnik/IzmeniFitnesCentar/@fc.IDCentra">Izmeni</a><br />
+                    <a class="btn btn-danger" href="/Vlasnik/ObrisiFitnesCentar/@fc.IDCentra">Obrisi</a>
+                </td>
+            </tr>
+        }
+     }
+</table>

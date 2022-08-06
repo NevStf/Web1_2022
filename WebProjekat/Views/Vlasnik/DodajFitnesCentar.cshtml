@@ -1,0 +1,58 @@
+﻿@using WebProjekat.BazaPodataka
+
+@{ ViewBag.Title = "DodajFitnesCentar"; 
+ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h1>@ViewBag.Message</h1>
+<form class="col-lg-6" action="/Vlasnik/DodajFitnesCentar" method="post">
+    <div class="form-group">
+        <label for="Id">ID fitnes centra:</label>
+        <input class="form-control" type="number" name="IDCentra" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Naziv">Naziv fitnes centra:</label>
+        <input class="form-control" type="text" name="Naziv" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Adresa">Adresa: </label>
+        <input class="form-control" type="text" name="Ulica" placeholder="Ulica" required />
+        <input class="form-control" type="number" name="Broj" placeholder="Broj" required />
+        <input class="form-control" type="text" name="Mesto" placeholder="Mesto" required />
+        <input class="form-control" type="number" name="PostanskiBroj" placeholder="Postanski broj" required />
+    </div>
+
+    <div class="form-group">
+        <label for="GodinaOtvaranja">Godina otvaranja:</label>
+        <input class="form-control" type="number" name="GodinaOtvaranja" required />
+    </div>
+
+    <div class="form-group">
+        <label for="MesecnaClanarina">Mesecna clanarina: </label>
+        <input class="form-control" type="number" name="MesecnaClanarina" required />
+    </div>
+
+    <div class="form-group">
+        <label for="GClanarina">Godisnja clanarina:</label>
+        <input class="form-control" type="number" name="GodisnjaClanarina" required />
+    </div>
+
+    <div class="form-group">
+        <label for="JedanTrening">Cena jednog treninga: </label>
+        <input class="form-control" type="number" name="CenaJednogTreninga" required />
+    </div>
+
+    <div class="form-group">
+        <label for="GrupniTrening">Cena grupnog treninga:</label>
+        <input class="form-control" type="number" name="CenaGrupnogTreninga" required />
+    </div>
+
+    <div class="form-group">
+        <label for="JedanTreningPersonalniTrener">Cena treninga sa personalnim trenerom:</label>
+        <input class="form-control" type="number" name="CenaJednogTreningaSaPersonalnimTrenerom" required />
+    </div>
+
+    <input class="form-control" type="submit" name="DodajFitnesCentar" value="Dodaj fitnes Centar" />
+
+</form>

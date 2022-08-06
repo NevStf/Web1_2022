@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<ArrayOfGrupniTrening xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GrupniTrening>
+    <IDGT>789</IDGT>
+    <Trener>Trener1</Trener>
+    <Naziv>Zumba10</Naziv>
+    <TipTreninga>BodyPump</TipTreninga>
+    <MestoOdrzavanja>
+      <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+      <IDCentra>10</IDCentra>
+      <Naziv>Naziv</Naziv>
+      <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+      <GodinaOtvaranja>1895</GodinaOtvaranja>
+      <MesecnaClanarina>2000</MesecnaClanarina>
+      <GodisnjaClanarina>22000</GodisnjaClanarina>
+      <CenaJednogTreninga>800</CenaJednogTreninga>
+      <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+      <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+      <Obrisan>false</Obrisan>
+    </MestoOdrzavanja>
+    <DatumiVremeTreninga>01/07/2022 02:24</DatumiVremeTreninga>
+    <MaksBrojPosetilaca>100</MaksBrojPosetilaca>
+    <VremeTrajanja>80</VremeTrajanja>
+    <ListaKorisnika>
+      <string>KIMe1</string>
+    </ListaKorisnika>
+    <Obrisan>false</Obrisan>
+    <BrojPrijavljenihKorisnika>1</BrojPrijavljenihKorisnika>
+  </GrupniTrening>
+  <GrupniTrening>
+    <IDGT>965</IDGT>
+    <Trener>Trener1</Trener>
+    <Naziv>Body pump pump pump</Naziv>
+    <TipTreninga>BodyPump</TipTreninga>
+    <MestoOdrzavanja>
+      <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+      <IDCentra>10</IDCentra>
+      <Naziv>Naziv</Naziv>
+      <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+      <GodinaOtvaranja>1895</GodinaOtvaranja>
+      <MesecnaClanarina>2000</MesecnaClanarina>
+      <GodisnjaClanarina>22000</GodisnjaClanarina>
+      <CenaJednogTreninga>800</CenaJednogTreninga>
+      <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+      <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+      <Obrisan>false</Obrisan>
+    </MestoOdrzavanja>
+    <DatumiVremeTreninga>24/07/2022 07:55</DatumiVremeTreninga>
+    <MaksBrojPosetilaca>745</MaksBrojPosetilaca>
+    <VremeTrajanja>50</VremeTrajanja>
+    <ListaKorisnika>
+      <string>KIMe1</string>
+    </ListaKorisnika>
+    <Obrisan>false</Obrisan>
+    <BrojPrijavljenihKorisnika>1</BrojPrijavljenihKorisnika>
+  </GrupniTrening>
+  <GrupniTrening>
+    <IDGT>1000</IDGT>
+    <Trener>Trener1</Trener>
+    <Naziv>Les Mills Tone 2</Naziv>
+    <TipTreninga>Zumba</TipTreninga>
+    <MestoOdrzavanja>
+      <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+      <IDCentra>10</IDCentra>
+      <Naziv>Naziv</Naziv>
+      <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+      <GodinaOtvaranja>1895</GodinaOtvaranja>
+      <MesecnaClanarina>2000</MesecnaClanarina>
+      <GodisnjaClanarina>22000</GodisnjaClanarina>
+      <CenaJednogTreninga>800</CenaJednogTreninga>
+      <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+      <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+      <Obrisan>false</Obrisan>
+    </MestoOdrzavanja>
+    <DatumiVremeTreninga>18/07/2022 02:30</DatumiVremeTreninga>
+    <MaksBrojPosetilaca>16</MaksBrojPosetilaca>
+    <VremeTrajanja>45</VremeTrajanja>
+    <ListaKorisnika>
+      <string>KIMe1</string>
+    </ListaKorisnika>
+    <Obrisan>false</Obrisan>
+    <BrojPrijavljenihKorisnika>1</BrojPrijavljenihKorisnika>
+  </GrupniTrening>
+</ArrayOfGrupniTrening>

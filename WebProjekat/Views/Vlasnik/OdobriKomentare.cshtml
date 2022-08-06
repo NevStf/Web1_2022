@@ -1,0 +1,51 @@
+﻿@using WebProjekat.BazaPodataka
+@model List<WebProjekat.Models.Komentar>
+@{ Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Odobri komentare"; }
+
+@*/*Komentar
+    ● Posetilac koji je ostavio komentar
+    ● Fitnes centar na koji se komentar odnosi
+    ● Tekst komentara
+    ● Ocena (na skali od 1 do 5)
+    */*@
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>
+                Korisnik
+            </th>
+            <th>Fitnes centar</th>
+            <th> Ocena </th>
+            <th>Tekst komentara</th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (WebProjekat.Models.Komentar k in Model)
+        {
+            if (k.StanjeKomentara == WebProjekat.Models.Stanje.U_Obradi)
+            {
+<tr>
+    <td>
+        @k.KorisnickoIme
+    </td>
+    <td>
+        @k.FitnesCentar.Naziv
+    </td>
+    <td>
+        @k.Ocena
+    </td>
+    <td>
+        @k.TekstKomentara
+    </td>
+    <td>
+        <a class="btn btn-info" href="/Vlasnik/OdobriKomentar/@k.IDKomentara">Odobri</a>
+        <a class="btn btn-info" href="/Vlasnik/OdbijKomentar/@k.IDKomentara">Odbij</a>
+    </td>
+</tr>
+}
+}
+    </tbody>
+</table>

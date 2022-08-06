@@ -1,0 +1,57 @@
+﻿@model WebProjekat.Models.Korisnik
+
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h1 style="color: red">@ViewBag.Message</h1>
+<form class="col-lg-4" action="/Vlasnik/DodajTrenera" method="post">
+    <div class="form-group">
+        <label for="KorisnickoIme">Korisnicko Ime:</label>
+        <input class="form-control" type="text" name="KorisnickoIme" value="" required />
+        <p class="text-danger">@ViewBag.KorisnickoIme</p>
+    </div>
+
+    <div class="form-group">
+        <label for="Ime">Ime:</label>
+        <input class="form-control" type="text" name="Ime" value="" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Prezime">Prezime:</label>
+        <input class="form-control" type="text" name="Prezime" value="" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Lozinka">Lozinka:</label>
+        <input class="form-control" type="password" name="Lozinka" value="" required />
+        <p class="text-danger">@ViewBag.Lozinka</p>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">E-mail:</label>
+        <input class="form-control" type="email" name="Email" value="" required />
+    </div>
+
+    <div class="form-group">
+        <label for="DatumRodjenja">Datum rodjenja:</label>
+        <input class="form-control" type="date" name="DatumRodjenja" value="" required />
+    </div>
+
+    <label for="Pol">Pol:</label>
+    <select name="Pol" required value="" style="margin-bottom: 15px">
+        <option value="Musko">Musko</option>
+        <option value="Zensko">Zensko</option>
+        <option value="Ostalo">Ostalo</option>
+    </select>
+
+    <label for="KojiFitnesCentar">Fitnes Centar u kome radi: </label>
+    <select name="FitnesCentarUKomJeAngazovan.IDCentra" required value ="" style="margin-bottom: 15px">
+        @foreach (var fc in WebProjekat.BazaPodataka.BazaFitnesCentara.sviFC) {
+            if (fc.KorisnickoImeVlasnika == ViewData["VlasnikKIme"].ToString())
+                {
+                <option value="@fc.IDCentra">@fc.Naziv</option>
+                }            
+        }
+    </select>
+    <input class="form-control" type="submit" name="Registracija" value="Registracija" />
+
+</form>

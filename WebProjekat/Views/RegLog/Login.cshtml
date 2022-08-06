@@ -1,0 +1,21 @@
+﻿@model WebProjekat.Models.Korisnik
+
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h1>@ViewBag.Message</h1>
+
+<form class="col-lg-2" action="/RegLog/Login" method="post">
+
+    <div class="form-group">
+        <label for="KorisnickoIme">Korisnicko Ime:</label>
+        <input class="form-control" type="text" name="KorisnickoIme" value="" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Lozinka">Lozinka:</label>
+        <input class="form-control" type="password" name="Lozinka" value="" required />
+    </div>
+
+    <input class="form-control" type="submit" name="Prijava" value="Prijava" />
+
+</form>

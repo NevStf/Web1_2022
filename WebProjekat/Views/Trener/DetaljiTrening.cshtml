@@ -1,0 +1,61 @@
+﻿@using WebProjekat.Models
+@model GrupniTrening
+
+@{ Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Detalji treninga"; }
+
+<h2 style="color:dodgerblue">Detalji treninga: @Model.Naziv</h2>
+<br />
+
+@if (Model.DatumiVremeTreninga > DateTime.Now.AddDays(1))
+{
+<a class="btn btn-info" href="/Trener/IzmeniTrening/@Model.IDGT">Izmeni Trening</a>}
+
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>
+                ID treninga
+            </th>
+            <td>
+                @Model.IDGT
+            </td>
+        </tr>
+        <tr>
+            <th>Naziv Treninga</th>
+            <td>@Model.Naziv</td>
+        </tr>
+        <tr>
+            <th> Tip treninga </th>
+            <td>@Model.TipTreninga.ToString()</td>
+        </tr>
+        <tr>
+            <th>Datum i vreme odrzavanja</th>
+            <td>@Model.DR</td>
+        </tr>
+        <tr>
+            <th>Adresa fitnes centra</th>
+            <td>@Model.MestoOdrzavanja.AdresaFitnesCentra</td>
+        </tr>
+        <tr>
+            <th>Cena treninga</th>
+            <td>@Model.MestoOdrzavanja.CenaGrupnogTreninga</td>
+        </tr>
+        <tr>
+            <th>Trajanje treninga</th>
+            <td>@Model.VremeTrajanja</td>
+        </tr>
+        <tr>
+            <th> Maksimalan Broj posetilaca</th>
+            <td>@Model.MaksBrojPosetilaca</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Spisak korisnika na treningu: </h3>
+@foreach (string k in Model.ListaKorisnika)
+{
+    <p>@k</p>
+}
+
+<a class="btn btn-info" href="/Trener/PregledTreninga">Nazad</a>

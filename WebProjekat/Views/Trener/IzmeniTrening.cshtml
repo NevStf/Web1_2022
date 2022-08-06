@@ -1,0 +1,56 @@
+﻿@*/*Grupni Trening
+    ● Naziv
+    ● Tip treninga (yoga, les mills tone, body pump itd. )
+    ● Fitnes centar gde se održava trening (veza sa klasom Fitnes centar)
+    ● Trajanje treninga (izraženo u minutima)
+    ● Datum i vreme treninga (čuvati u formatu dd/MM/yyyy HH:mm)
+    ● Maksimalan broj posetilaca
+    ● Spisak posetilaca (lista Korisnika sa ulogom Posetilac koji su se prijavili da pohađaju
+    trening)*/
+    @{*@
+@model WebProjekat.Models.GrupniTrening
+
+@{ ViewBag.Title = "Izmeni trening";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h1>@ViewBag.Message</h1>
+<form class="col-lg-6" action="/Trener/IzmeniTrening" method="post">
+    <div class="form-group">
+        <label>ID treninga:</label>
+        <input class="form-control" type="number" name="IDGT" value="@Model.IDGT" readonly />
+    </div>
+
+    <div class="form-group">
+        <label>Naziv:</label>
+        <input class="form-control" type="text" name="Naziv" value="@Model.Naziv" required />
+    </div>
+
+    <div class="form-group">
+        <label>Tip treninga</label>
+        <select name="TipTreninga" required value="@Model.TipTreninga" style="margin-bottom: 15px">
+            <option value=0>Yoga</option>
+            <option value=1>Les Mills Tone</option>
+            <option value=2>Body Pump</option>
+            <option value=3>Zumba</option>
+            <option value=4>Drugo</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Datum i vreme treninga:</label>
+        <input class="form-control" type="datetime-local" name="DatumiVremeTreninga" value="@Model.DatumiVremeTreninga" required />
+    </div>
+
+    <div class="form-group">
+        <label>Vreme trajanja: </label>
+        <input class="form-control" type="number" name="VremeTrajanja" value="@Model.VremeTrajanja" required />
+    </div>
+
+    <div class="form-group">
+        <label>Maksimalan broj ucesnika:</label>
+        <input class="form-control" type="number" name="MaksBrojPosetilaca" value="@Model.MaksBrojPosetilaca" required />
+    </div>
+
+    <input class="form-control" type="submit" name="IzmeniTrening" value="Izmeni trening" />
+
+</form>

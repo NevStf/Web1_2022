@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ArrayOfFitnesCentar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FitnesCentar>
+    <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+    <IDCentra>123</IDCentra>
+    <Naziv>Naziv naziv</Naziv>
+    <AdresaFitnesCentra>Izmena 1, asdasdsd, 20000</AdresaFitnesCentra>
+    <GodinaOtvaranja>1233</GodinaOtvaranja>
+    <MesecnaClanarina>1233</MesecnaClanarina>
+    <GodisnjaClanarina>1233</GodisnjaClanarina>
+    <CenaJednogTreninga>1233</CenaJednogTreninga>
+    <CenaGrupnogTreninga>1233</CenaGrupnogTreninga>
+    <CenaJednogTreningaSaPersonalnimTrenerom>1233</CenaJednogTreningaSaPersonalnimTrenerom>
+    <Obrisan>false</Obrisan>
+  </FitnesCentar>
+  <FitnesCentar>
+    <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+    <IDCentra>1233</IDCentra>
+    <Naziv>Fitnes Centar 10</Naziv>
+    <AdresaFitnesCentra>Ulica ulica 3, Grad, 2500</AdresaFitnesCentra>
+    <GodinaOtvaranja>2020</GodinaOtvaranja>
+    <MesecnaClanarina>1500</MesecnaClanarina>
+    <GodisnjaClanarina>1500</GodisnjaClanarina>
+    <CenaJednogTreninga>1500</CenaJednogTreninga>
+    <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+    <CenaJednogTreningaSaPersonalnimTrenerom>1500</CenaJednogTreningaSaPersonalnimTrenerom>
+    <Obrisan>false</Obrisan>
+  </FitnesCentar>
+  <FitnesCentar>
+    <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+    <IDCentra>10</IDCentra>
+    <Naziv>Naziv</Naziv>
+    <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+    <GodinaOtvaranja>1895</GodinaOtvaranja>
+    <MesecnaClanarina>2000</MesecnaClanarina>
+    <GodisnjaClanarina>22000</GodisnjaClanarina>
+    <CenaJednogTreninga>800</CenaJednogTreninga>
+    <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+    <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+    <Obrisan>false</Obrisan>
+  </FitnesCentar>
+  <FitnesCentar>
+    <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+    <IDCentra>150</IDCentra>
+    <Naziv>FitPass</Naziv>
+    <AdresaFitnesCentra>Adresa 11, Grad, 2000</AdresaFitnesCentra>
+    <GodinaOtvaranja>1998</GodinaOtvaranja>
+    <MesecnaClanarina>5000</MesecnaClanarina>
+    <GodisnjaClanarina>15000</GodisnjaClanarina>
+    <CenaJednogTreninga>500</CenaJednogTreninga>
+    <CenaGrupnogTreninga>800</CenaGrupnogTreninga>
+    <CenaJednogTreningaSaPersonalnimTrenerom>5000</CenaJednogTreningaSaPersonalnimTrenerom>
+    <Obrisan>false</Obrisan>
+  </FitnesCentar>
+</ArrayOfFitnesCentar>

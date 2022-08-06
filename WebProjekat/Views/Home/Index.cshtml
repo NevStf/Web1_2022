@@ -1,0 +1,73 @@
+﻿@using WebProjekat.Models
+@model List<WebProjekat.Models.FitnesCentar>
+
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<p>@ViewBag.Message</p>
+
+<div class="row">
+    <div class="col-lg-4">
+        <form action="/Home/Index" method="post">
+            <div class="form-group">
+                <label for="Naziv">Trazi Naziv</label>
+                <input class="form-control" type="text" name="Naziv" />
+                <label for="Adresa">Trazi Adresu</label>
+                <input class="form-control" type="text" name="Adresa" />
+            </div>
+            <div class="form-group">
+                <label for="GodinaOtvaranjaMin">Trazi Godinu Otvaranja od:</label>
+                <input class="form-control" type="number" min="1980" max="2022" name="GodinaOtvaranjaMin" />
+                <label for="GodinaOtvaranjaMax">do:</label>
+                <input class="form-control" type="number" min="1980" max="2022" name="GodinaOtvaranjaMax" />
+            </div>
+
+            <input type="submit" class="btn-primary" value="Pretrazi" />
+        </form>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-lg-4">
+        <a class="btn btn-primary" href="/Home/SortirajNaziv/0">SortirajPoNazivuAsc</a>
+        <a class="btn btn-primary" href="/Home/SortirajNaziv/1">SortirajPoNazivuDsc</a>
+    </div>
+    <div class="col-lg-4">
+        <a class="btn btn-primary" href="/Home/SortirajAdresu/0">SortirajPoAdresiAsc</a>
+        <a class="btn btn-primary" href="/Home/SortirajAdresu/1">SortirajPoAdresiDsc</a>
+    </div>
+    <div class="col-lg-4">
+        <a class="btn btn-primary" href="/Home/SortirajGodinu/0">SortirajPoGodiniAsc</a>
+        <a class="btn btn-primary" href="/Home/SortirajGodinu/1">SortirajPoGodiniDsc</a>
+    </div>
+</div>
+    <hr />
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Naziv Fitnes Centra
+            </th>
+            <th>
+                Adresa
+            </th>
+            <th>
+                Godina Otvaranja
+            </th>
+            <th>
+
+            </th>
+        </tr>
+        @if (WebProjekat.BazaPodataka.BazaFitnesCentara.sviFC.Count > 0)
+        {
+            foreach (WebProjekat.Models.FitnesCentar fc in Model)
+            {
+
+<tr>
+    <td>@fc.Naziv</td>
+    <td>@fc.AdresaFitnesCentra</td>
+    <td>@fc.GodinaOtvaranja</td>
+
+    <td><a class="btn btn-primary" href="/FitnesCentri/PregledFitnesCentra/@fc.IDCentra">Detalji</a></td>
+</tr>
+}
+}
+    </table>

@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<ArrayOfKorisnik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Korisnik>
+    <KorisnickoIme>Vlasnik1</KorisnickoIme>
+    <Lozinka>123456789</Lozinka>
+    <Ime>Ime</Ime>
+    <Prezime>Prezime</Prezime>
+    <Pol>Zensko</Pol>
+    <Email>emajl@emajl.com</Email>
+    <Uloga>VLASNIK</Uloga>
+    <DatumRodjenja>22/06/2022</DatumRodjenja>
+    <Blokiran>false</Blokiran>
+    <ListaGrupnihTreninga />
+    <FitnesCentri>
+      <FitnesCentar>
+        <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+        <IDCentra>123</IDCentra>
+        <Naziv>Naziv naziv</Naziv>
+        <AdresaFitnesCentra>Izmena 1, asdasdsd, 20000</AdresaFitnesCentra>
+        <GodinaOtvaranja>1233</GodinaOtvaranja>
+        <MesecnaClanarina>1233</MesecnaClanarina>
+        <GodisnjaClanarina>1233</GodisnjaClanarina>
+        <CenaJednogTreninga>1233</CenaJednogTreninga>
+        <CenaGrupnogTreninga>1233</CenaGrupnogTreninga>
+        <CenaJednogTreningaSaPersonalnimTrenerom>1233</CenaJednogTreningaSaPersonalnimTrenerom>
+        <Obrisan>false</Obrisan>
+      </FitnesCentar>
+      <FitnesCentar>
+        <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+        <IDCentra>1233</IDCentra>
+        <Naziv>Fitnes Centar 10</Naziv>
+        <AdresaFitnesCentra>Ulica ulica 3, Grad, 2500</AdresaFitnesCentra>
+        <GodinaOtvaranja>2020</GodinaOtvaranja>
+        <MesecnaClanarina>1500</MesecnaClanarina>
+        <GodisnjaClanarina>1500</GodisnjaClanarina>
+        <CenaJednogTreninga>1500</CenaJednogTreninga>
+        <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+        <CenaJednogTreningaSaPersonalnimTrenerom>1500</CenaJednogTreningaSaPersonalnimTrenerom>
+        <Obrisan>false</Obrisan>
+      </FitnesCentar>
+      <FitnesCentar>
+        <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+        <IDCentra>10</IDCentra>
+        <Naziv>Naziv</Naziv>
+        <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+        <GodinaOtvaranja>1895</GodinaOtvaranja>
+        <MesecnaClanarina>2000</MesecnaClanarina>
+        <GodisnjaClanarina>22000</GodisnjaClanarina>
+        <CenaJednogTreninga>800</CenaJednogTreninga>
+        <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+        <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+        <Obrisan>false</Obrisan>
+      </FitnesCentar>
+      <FitnesCentar>
+        <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+        <IDCentra>150</IDCentra>
+        <Naziv>FitPass</Naziv>
+        <AdresaFitnesCentra>Adresa 11, Grad, 2000</AdresaFitnesCentra>
+        <GodinaOtvaranja>1998</GodinaOtvaranja>
+        <MesecnaClanarina>5000</MesecnaClanarina>
+        <GodisnjaClanarina>15000</GodisnjaClanarina>
+        <CenaJednogTreninga>500</CenaJednogTreninga>
+        <CenaGrupnogTreninga>800</CenaGrupnogTreninga>
+        <CenaJednogTreningaSaPersonalnimTrenerom>5000</CenaJednogTreningaSaPersonalnimTrenerom>
+        <Obrisan>false</Obrisan>
+      </FitnesCentar>
+    </FitnesCentri>
+    <FitnesCentarUKomJeAngazovan>
+      <IDCentra>0</IDCentra>
+      <GodinaOtvaranja>0</GodinaOtvaranja>
+      <MesecnaClanarina>0</MesecnaClanarina>
+      <GodisnjaClanarina>0</GodisnjaClanarina>
+      <CenaJednogTreninga>0</CenaJednogTreninga>
+      <CenaGrupnogTreninga>0</CenaGrupnogTreninga>
+      <CenaJednogTreningaSaPersonalnimTrenerom>0</CenaJednogTreningaSaPersonalnimTrenerom>
+      <Obrisan>false</Obrisan>
+    </FitnesCentarUKomJeAngazovan>
+  </Korisnik>
+  <Korisnik>
+    <KorisnickoIme>Trener1</KorisnickoIme>
+    <Lozinka>123456789</Lozinka>
+    <Ime>Ime</Ime>
+    <Prezime>Prezime</Prezime>
+    <Pol>Zensko</Pol>
+    <Email>emajl@emajl.com</Email>
+    <Uloga>TRENER</Uloga>
+    <DatumRodjenja>07/06/2022</DatumRodjenja>
+    <Blokiran>false</Blokiran>
+    <ListaGrupnihTreninga>
+      <GrupniTrening>
+        <IDGT>789</IDGT>
+        <Trener>Trener1</Trener>
+        <Naziv>Zumba10</Naziv>
+        <TipTreninga>BodyPump</TipTreninga>
+        <MestoOdrzavanja>
+          <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+          <IDCentra>10</IDCentra>
+          <Naziv>Naziv</Naziv>
+          <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+          <GodinaOtvaranja>1895</GodinaOtvaranja>
+          <MesecnaClanarina>2000</MesecnaClanarina>
+          <GodisnjaClanarina>22000</GodisnjaClanarina>
+          <CenaJednogTreninga>800</CenaJednogTreninga>
+          <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+          <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+          <Obrisan>false</Obrisan>
+        </MestoOdrzavanja>
+        <DatumiVremeTreninga>01/07/2022 02:24</DatumiVremeTreninga>
+        <MaksBrojPosetilaca>100</MaksBrojPosetilaca>
+        <VremeTrajanja>80</VremeTrajanja>
+        <ListaKorisnika>
+          <string>KIMe1</string>
+          <string>KIMe1</string>
+          <string>KIMe1</string>
+        </ListaKorisnika>
+        <Obrisan>false</Obrisan>
+        <BrojPrijavljenihKorisnika>3</BrojPrijavljenihKorisnika>
+      </GrupniTrening>
+      <GrupniTrening>
+        <IDGT>965</IDGT>
+        <Trener>Trener1</Trener>
+        <Naziv>Body pump pump pump</Naziv>
+        <TipTreninga>BodyPump</TipTreninga>
+        <MestoOdrzavanja>
+          <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+          <IDCentra>10</IDCentra>
+          <Naziv>Naziv</Naziv>
+          <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+          <GodinaOtvaranja>1895</GodinaOtvaranja>
+          <MesecnaClanarina>2000</MesecnaClanarina>
+          <GodisnjaClanarina>22000</GodisnjaClanarina>
+          <CenaJednogTreninga>800</CenaJednogTreninga>
+          <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+          <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+          <Obrisan>false</Obrisan>
+        </MestoOdrzavanja>
+        <DatumiVremeTreninga>29/06/2022 07:55</DatumiVremeTreninga>
+        <MaksBrojPosetilaca>745</MaksBrojPosetilaca>
+        <VremeTrajanja>50</VremeTrajanja>
+        <ListaKorisnika>
+          <string>KIMe1</string>
+          <string>KIMe1</string>
+          <string>KIMe1</string>
+        </ListaKorisnika>
+        <Obrisan>false</Obrisan>
+        <BrojPrijavljenihKorisnika>3</BrojPrijavljenihKorisnika>
+      </GrupniTrening>
+      <GrupniTrening>
+        <IDGT>1000</IDGT>
+        <Trener>Trener1</Trener>
+        <Naziv>Les Mills Tone 2</Naziv>
+        <TipTreninga>Zumba</TipTreninga>
+        <MestoOdrzavanja>
+          <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+          <IDCentra>10</IDCentra>
+          <Naziv>Naziv</Naziv>
+          <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+          <GodinaOtvaranja>1895</GodinaOtvaranja>
+          <MesecnaClanarina>2000</MesecnaClanarina>
+          <GodisnjaClanarina>22000</GodisnjaClanarina>
+          <CenaJednogTreninga>800</CenaJednogTreninga>
+          <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+          <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+          <Obrisan>false</Obrisan>
+        </MestoOdrzavanja>
+        <DatumiVremeTreninga>18/07/2022 02:30</DatumiVremeTreninga>
+        <MaksBrojPosetilaca>16</MaksBrojPosetilaca>
+        <VremeTrajanja>45</VremeTrajanja>
+        <ListaKorisnika>
+          <string>KIMe1</string>
+          <string>KIMe1</string>
+        </ListaKorisnika>
+        <Obrisan>false</Obrisan>
+        <BrojPrijavljenihKorisnika>2</BrojPrijavljenihKorisnika>
+      </GrupniTrening>
+    </ListaGrupnihTreninga>
+    <FitnesCentri />
+    <FitnesCentarUKomJeAngazovan>
+      <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+      <IDCentra>10</IDCentra>
+      <Naziv>Naziv</Naziv>
+      <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+      <GodinaOtvaranja>1895</GodinaOtvaranja>
+      <MesecnaClanarina>2000</MesecnaClanarina>
+      <GodisnjaClanarina>22000</GodisnjaClanarina>
+      <CenaJednogTreninga>800</CenaJednogTreninga>
+      <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+      <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+      <Obrisan>false</Obrisan>
+    </FitnesCentarUKomJeAngazovan>
+  </Korisnik>
+  <Korisnik>
+    <KorisnickoIme>KIMe1</KorisnickoIme>
+    <Lozinka>12345678</Lozinka>
+    <Ime>Ime</Ime>
+    <Prezime>Prezime</Prezime>
+    <Pol>Zensko</Pol>
+    <Email>emajl@emajl.com</Email>
+    <Uloga>POSETILAC</Uloga>
+    <DatumRodjenja>28/06/2022</DatumRodjenja>
+    <Blokiran>false</Blokiran>
+    <ListaGrupnihTreninga>
+      <GrupniTrening>
+        <IDGT>789</IDGT>
+        <Trener>Trener1</Trener>
+        <Naziv>Zumba10</Naziv>
+        <TipTreninga>Yoga</TipTreninga>
+        <MestoOdrzavanja>
+          <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+          <IDCentra>10</IDCentra>
+          <Naziv>Naziv</Naziv>
+          <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+          <GodinaOtvaranja>1895</GodinaOtvaranja>
+          <MesecnaClanarina>2000</MesecnaClanarina>
+          <GodisnjaClanarina>22000</GodisnjaClanarina>
+          <CenaJednogTreninga>800</CenaJednogTreninga>
+          <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+          <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+          <Obrisan>false</Obrisan>
+        </MestoOdrzavanja>
+        <DatumiVremeTreninga>01/07/2022 02:24</DatumiVremeTreninga>
+        <MaksBrojPosetilaca>100</MaksBrojPosetilaca>
+        <VremeTrajanja>80</VremeTrajanja>
+        <ListaKorisnika>
+          <string>KIMe1</string>
+        </ListaKorisnika>
+        <Obrisan>false</Obrisan>
+        <BrojPrijavljenihKorisnika>1</BrojPrijavljenihKorisnika>
+      </GrupniTrening>
+      <GrupniTrening>
+        <IDGT>965</IDGT>
+        <Trener>Trener1</Trener>
+        <Naziv>Body pump pump pump</Naziv>
+        <TipTreninga>BodyPump</TipTreninga>
+        <MestoOdrzavanja>
+          <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+          <IDCentra>10</IDCentra>
+          <Naziv>Naziv</Naziv>
+          <AdresaFitnesCentra>Ulica 1, Mesto, 1000</AdresaFitnesCentra>
+          <GodinaOtvaranja>1895</GodinaOtvaranja>
+          <MesecnaClanarina>2000</MesecnaClanarina>
+          <GodisnjaClanarina>22000</GodisnjaClanarina>
+          <CenaJednogTreninga>800</CenaJednogTreninga>
+          <CenaGrupnogTreninga>1500</CenaGrupnogTreninga>
+          <CenaJednogTreningaSaPersonalnimTrenerom>6000</CenaJednogTreningaSaPersonalnimTrenerom>
+          <Obrisan>false</Obrisan>
+        </MestoOdrzavanja>
+        <DatumiVremeTreninga>24/07/2022 07:55</DatumiVremeTreninga>
+        <MaksBrojPosetilaca>745</MaksBrojPosetilaca>
+        <VremeTrajanja>50</VremeTrajanja>
+        <ListaKorisnika>
+          <string>KIMe1</string>
+        </ListaKorisnika>
+        <Obrisan>false</Obrisan>
+        <BrojPrijavljenihKorisnika>1</BrojPrijavljenihKorisnika>
+      </GrupniTrening>
+    </ListaGrupnihTreninga>
+    <FitnesCentri />
+  </Korisnik>
+  <Korisnik>
+    <KorisnickoIme>Trener2</KorisnickoIme>
+    <Lozinka>123456789</Lozinka>
+    <Ime>ImeIme</Ime>
+    <Prezime>PrezimePrezime</Prezime>
+    <Pol>Ostalo</Pol>
+    <Email>emajl@emajl.com</Email>
+    <Uloga>TRENER</Uloga>
+    <DatumRodjenja>16/03/2022</DatumRodjenja>
+    <Blokiran>false</Blokiran>
+    <ListaGrupnihTreninga />
+    <FitnesCentri />
+    <FitnesCentarUKomJeAngazovan>
+      <KorisnickoImeVlasnika>Vlasnik1</KorisnickoImeVlasnika>
+      <IDCentra>150</IDCentra>
+      <Naziv>FitPass</Naziv>
+      <AdresaFitnesCentra>Adresa 11, Grad, 2000</AdresaFitnesCentra>
+      <GodinaOtvaranja>1998</GodinaOtvaranja>
+      <MesecnaClanarina>5000</MesecnaClanarina>
+      <GodisnjaClanarina>15000</GodisnjaClanarina>
+      <CenaJednogTreninga>500</CenaJednogTreninga>
+      <CenaGrupnogTreninga>800</CenaGrupnogTreninga>
+      <CenaJednogTreningaSaPersonalnimTrenerom>5000</CenaJednogTreningaSaPersonalnimTrenerom>
+      <Obrisan>false</Obrisan>
+    </FitnesCentarUKomJeAngazovan>
+  </Korisnik>
+  <Korisnik>
+    <KorisnickoIme>noviKorisnik</KorisnickoIme>
+    <Lozinka>123456789</Lozinka>
+    <Ime>novi</Ime>
+    <Prezime>korisnik</Prezime>
+    <Pol>Musko</Pol>
+    <Email>email@email.com</Email>
+    <Uloga>POSETILAC</Uloga>
+    <DatumRodjenja>03/06/2022</DatumRodjenja>
+    <Blokiran>false</Blokiran>
+    <ListaGrupnihTreninga />
+    <FitnesCentri />
+  </Korisnik>
+  <Korisnik>
+    <KorisnickoIme>ssadfasd</KorisnickoIme>
+    <Lozinka>asdasdas</Lozinka>
+    <Ime>asdasd</Ime>
+    <Prezime>asdasd</Prezime>
+    <Pol>Musko</Pol>
+    <Email>nevena_98_cuprija@hotmail.com</Email>
+    <Uloga>POSETILAC</Uloga>
+    <DatumRodjenja>30/06/2022</DatumRodjenja>
+    <Blokiran>false</Blokiran>
+    <ListaGrupnihTreninga />
+    <FitnesCentri />
+  </Korisnik>
+</ArrayOfKorisnik>

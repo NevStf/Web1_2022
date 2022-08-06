@@ -1,0 +1,98 @@
+﻿@using WebProjekat.Models
+@model  Tuple<FitnesCentar, List<Komentar>, bool>
+
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h1>@ViewBag.Message</h1>
+<h2 style="color:dodgerblue">Pregled fitnes Centra: @Model.Item1.Naziv</h2>
+<p>Godina otvaranja: @Model.Item1.GodinaOtvaranja</p>
+<br />
+<p>Adresa fitnes centra: @Model.Item1.AdresaFitnesCentra</p>
+<br />
+<p>Cena grupnog treninga: @Model.Item1.CenaGrupnogTreninga</p>
+<br />
+<p>Cena jednog treninga: @Model.Item1.CenaJednogTreninga</p>
+<br />
+<p>Cena jednog treninga sa personalnim trenerom: @Model.Item1.CenaJednogTreningaSaPersonalnimTrenerom</p>
+<br />
+<p>Godisnja clanarina: @Model.Item1.GodisnjaClanarina</p>
+<br />
+<br />
+@if (((WebProjekat.Models.Korisnik)Session["Korisnik"]) != null && ((WebProjekat.Models.Korisnik)Session["Korisnik"]).Uloga == WebProjekat.Models.Uloga.POSETILAC && Model.Item3)
+{
+<a class="btn btn-info" href="/Posetilac/Komentarisi/@Model.Item1.IDCentra">Dodaj Komentar</a>
+}
+
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>Naziv treninga</th>
+            <th>Tip treninga</th>
+            <th> Datum i vreme treninga</th>
+            <th>Duzina treninga</th>
+            <th>Korisnicko ime trenera</th>
+            <th>Maksimalni broj na treningu</th>
+            <th>Broj prijavljenih</th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var g in WebProjekat.BazaPodataka.BazaGrupnihTreninga.sviTreninziPoFitnesCentru(Model.Item1.IDCentra))
+        {
+            if (!g.Obrisan && !g.Zavrsen)
+            {
+<tr>
+    <td>@g.Naziv</td>
+    <td>@g.TipTreninga.ToString()</td>
+    <td>@g.DR</td>
+    <td>@g.VremeTrajanja min.</td>
+    <td>@g.Trener</td>
+    <td>@g.MaksBrojPosetilaca</td>
+    <td>@g.ListaKorisnika.Count()</td>
+    @if (((WebProjekat.Models.Korisnik)Session["Korisnik"]) != null && ((WebProjekat.Models.Korisnik)Session["Korisnik"]).Uloga == WebProjekat.Models.Uloga.POSETILAC)
+    {
+        <td><a class="btn btn-info" href="/Posetilac/PrijaviSeNaTrening/@g.IDGT">Prijavi Se</a></td>
+    }
+</tr>}
+            }
+    </tbody>
+</table>
+
+<div class="container d-flex justify-content-center mt-100 mb-100">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Komentari</h4>
+                    <hr />
+                </div>
+
+                <div class="comment-widgets m-b-20">
+                    @if (Model.Item2 == null || Model.Item2.Count == 0)
+                    {
+        <h5>Trenutno nema komentara.</h5> }
+                    else
+                    {
+
+                        foreach (Komentar kom in Model.Item2)
+                        {
+        <div class="d-flex flex-row comment-row">
+            <div class="comment-text w-100">
+                <h5>@kom.KorisnickoIme</h5>
+                <div class="comment-footer">
+                    <span class="label label-info">Ocena: @kom.Ocena/5</span>
+                </div>
+                <p class="m-b-5 m-t-10">@kom.TekstKomentara</p>
+            </div>
+        </div>
+                            <hr />}
+                                        }
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
